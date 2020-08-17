@@ -1,6 +1,6 @@
 a =6
 
-
+# task 1
 def fibonacci_fun(index):
     if index < 0:
         pass
@@ -15,8 +15,8 @@ def fibonacci_fun(index):
 def fibonacci(arr):
     return [fibonacci_fun(i) for i in arr ]
 
+# task 2
 
-# 2, 1, 3, 4, 7, 11, 18, 29, 47, 76, 123,
 def lucas(num):
     if num<0:
         pass
@@ -28,3 +28,25 @@ def lucas(num):
 
 def multiple_lucas(arr):
     return [lucas (i) for i in arr]
+
+
+# task 3
+def sum_series(num,a=0,b=1):
+    if num<0:
+        pass
+    elif a==0 :
+        return fibonacci_fun(num)
+    elif a==2 :
+        return lucas(num)
+    
+    else:
+        if num ==a:
+            return a
+        elif num==b:
+            return b
+    return sum_series ( num - 1 ) + sum_series ( num - 2 )
+
+# for i in range(0,10):
+#     print(sum_series(i,0,0))
+
+print(sum_series(0,3,1))

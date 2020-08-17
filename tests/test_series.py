@@ -1,5 +1,5 @@
 from math_series import __version__
-from math_series.series import a , fibonacci_fun,fibonacci,lucas,multiple_lucas
+from math_series.series import a , fibonacci_fun,fibonacci,lucas,multiple_lucas,sum_series
 
 
 
@@ -50,3 +50,7 @@ def test_many_lucas():
     expected=[18, 29, 47, 76, 123]
     actual=multiple_lucas([6,7,8,9,10])
     assert expected==actual
+
+
+#------------sum_series--------------#
+
