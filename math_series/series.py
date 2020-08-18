@@ -34,17 +34,21 @@ def multiple_lucas(arr):
 def sum_series(num,a=0,b=1):
     if num<0:
         pass
-    elif a==0 :
+    # if num ==0:
+    #     return a
+    # elif num == 1:
+    #     return b
+    if a==0 :
         return fibonacci_fun(num)
     elif a==2 :
         return lucas(num)
     
     else:
-        if num ==a:
+        if num ==0:
             return a
-        elif num==b:
+        elif num==1:
             return b
-    return sum_series ( num - 1 ) + sum_series ( num - 2 )
+    return sum_series ( num - 1,a,b ) + sum_series ( num - 2,a,b )
 
 # for i in range(0,10):
 #     print(sum_series(i,0,0))
